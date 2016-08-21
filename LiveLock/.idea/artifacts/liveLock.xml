@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="liveLock">
+    <output-path>$PROJECT_DIR$/out/artifacts/liveLock</output-path>
+    <root id="root">
+      <element id="archive" name="liveLock.jar">
+        <element id="module-output" name="LiveLock" />
+      </element>
+    </root>
+  </artifact>
+</component>
