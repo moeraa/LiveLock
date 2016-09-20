@@ -1,0 +1,58 @@
+
+'http://125.39.16.13:83/webservice/j_random_words/5/';
+
+$ajax{
+   url:"./dsfa/",
+   type:"post",//提交的方式
+   datatype:"json",
+   data:{j:"fasdfasdf",b:[{},{},{}]},
+   success:function(data){
+   alert("xxxxx");
+   }
+}
+
+
+<script type="text/javascript">
+    var url=windows.document.location.href.Tostring();
+    var u=url.split("?");
+    var a=u[1].split("&");
+    var b=a[0].split("=");
+    $(function(){
+        if(b[1]!=null){
+            $("visiter").html(b[1].Tostring());
+            $("#circle").attr('src',"./img/xxx.jpg");
+        }
+    })
+
+//$.ajax
+  var yz=$.ajax({
+    type:"post",
+    url:'http://125.39.16.13:83/webservice/j_random_words/5/',
+    data:{
+    },
+    cache:false,
+    dataType:"json",
+    success:function(data){
+        if(data.msg=="false"){
+            textpassword2.html("<font color="red">xxxx!</font>");
+            $("#validatepassword2").val("pwd2error");
+            checkpassword2=false;
+            return;
+        }
+    },
+    error:function(){
+    }
+
+  })
+
+  $.ajax({
+    type:"post",
+    url:"#(request.path)",
+    dataType:"json",
+    data:{'cat':cat,'clo':$('#clo').is(":checked"),'tit':tit,'con':con,'password':password},
+    success:function(data){
+        t.html(data.status + ":"+data.msg);
+        $('#submit').removeattr("disabled");
+        scroll(0,$("#h").position().top);
+    },
+  })
